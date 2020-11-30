@@ -1,0 +1,13 @@
+version: "3.5"
+services:
+  agrogest_backend:
+    container_name: semantic
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "python app.py"
+    ports:
+      - "3001:3001"
+    volumes:
+      - .:/app
+
